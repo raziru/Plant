@@ -67,7 +67,7 @@ let pconf = document.querySelector('.box-result p')
         
 
         fileUpload.addEventListener('change', function(e){
-            /*
+            
             let uploadedImage = e.target.value
             if (uploadedImage){
                 document.getElementById("blankFile-1").innerHTML = uploadedImage.replace("C:\\fakepath\\","")
@@ -83,7 +83,7 @@ let pconf = document.querySelector('.box-result p')
                     document.querySelector(".success-1 i").style.color = "rgb(25,110,180)"
                 }
             }
-            */
+            
             let file = this.files[0]
             if (file){
                 boxResult.style.display = 'block'
