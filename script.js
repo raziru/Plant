@@ -6,7 +6,7 @@ let boxResult = document.querySelector('.box-result')
 let confidence = document.querySelector('.confidence')
 let pconf = document.querySelector('.box-result p')
 
-        
+
         let progressBar = 
             new ProgressBar.Circle('#progress', {
             color: 'limegreen',
@@ -24,7 +24,7 @@ let pconf = document.querySelector('.box-result p')
         }
 
          // here the data will be return.
-        
+
 
         // Initialize/Load model
         async function initialize() {
@@ -38,14 +38,14 @@ let pconf = document.querySelector('.box-result p')
             // Function for invoking prediction
             let img = document.getElementById('image')
             let offset = tf.scalar(255)
-            let tensorImg = tf.browser.fromPixels(img).resizeNearestNeighbor([224,224]).toFloat().expandDims();
+            let tensorImg =   tf.browser.fromPixels(img).resizeNearestNeighbor([224,224]).toFloat().expandDims();
             let tensorImg_scaled = tensorImg.div(offset)
             prediction = await model.predict(tensorImg_scaled).data();
-           
+
             fetchData().then((data)=> 
                 {
                     predicted_class = tf.argMax(prediction)
-                    
+
                     class_idx = Array.from(predicted_class.dataSync())[0]
                     document.querySelector('.pred_class').innerHTML = data[class_idx]
                     document.querySelector('.inner').innerHTML = `${parseFloat(prediction[class_idx]*100).toFixed(2)}% SURE`
@@ -58,16 +58,16 @@ let pconf = document.querySelector('.box-result p')
                     pconf.style.display = 'block'
 
                     confidence.innerHTML = Math.round(prediction[class_idx]*100)
-  
+
                 }
             );
-            
+
         }
 
-        
+
 
         fileUpload.addEventListener('change', function(e){
-            
+
             let uploadedImage = e.target.value
             if (uploadedImage){
                 document.getElementById("blankFile-1").innerHTML = uploadedImage.replace("C:\\fakepath\\","")
@@ -83,14 +83,13 @@ let pconf = document.querySelector('.box-result p')
                     document.querySelector(".success-1 i").style.color = "rgb(25,110,180)"
                 }
             }
-            
             let file = this.files[0]
             if (file){
                 boxResult.style.display = 'block'
                 const reader = new FileReader();
                 reader.readAsDataURL(file);
                 reader.addEventListener("load", function(){
-                    
+
                     img.style.display = "block"
                     img.setAttribute('src', this.result);
                 });
@@ -103,4 +102,4 @@ let pconf = document.querySelector('.box-result p')
             initialize().then( () => { 
                 predict()
             })
-        })
+        }) 
