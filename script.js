@@ -58,7 +58,6 @@ let pconf = document.querySelector('.box-result p')
                     pconf.style.display = 'block'
 
                     confidence.innerHTML = Math.round(prediction[class_idx]*100)
-
                 }
             );
 
@@ -89,7 +88,6 @@ let pconf = document.querySelector('.box-result p')
                 const reader = new FileReader();
                 reader.readAsDataURL(file);
                 reader.addEventListener("load", function(){
-
                     img.style.display = "block"
                     img.setAttribute('src', this.result);
                 });
