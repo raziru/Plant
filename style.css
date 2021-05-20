@@ -175,11 +175,6 @@ display: block;
     }
 }
 
-.tutorial{
-    text-align: center;
-    color: #222222;
-}
-
 path {
     stroke: limegreen;
     stroke-width: 10;
