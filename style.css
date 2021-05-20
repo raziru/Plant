@@ -60,10 +60,7 @@ hr{
     cursor: pointer;
     min-height: 300px;
 }
-.success-1, .success-2{
-    display:none;
-    color: limegreen;
-}
+
 .success-1 i, .success-2 i{
     font-size: 18px !important;
     margin-left:6px;
