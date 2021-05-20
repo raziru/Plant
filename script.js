@@ -6,14 +6,13 @@ let boxResult = document.querySelector('.box-result')
 let confidence = document.querySelector('.confidence')
 let pconf = document.querySelector('.box-result p')
 
-
-        let progressBar = 
-            new ProgressBar.Circle('#progress', {
-            color: 'limegreen',
-            strokeWidth: 10,
-            duration: 2000, // milliseconds
-            easing: 'easeInOut'
-        });
+let progressBar = 
+    new ProgressBar.Circle('#progress', {
+    color: 'lightgreen',
+    strokeWidth: 10,
+    duration: 2000, // milliseconds
+    easing: 'easeInOut'
+});
 
         async function fetchData(){
             let response = await fetch('./class_indices.json');
@@ -71,7 +70,6 @@ let pconf = document.querySelector('.box-result p')
             if (uploadedImage){
                 document.getElementById("file-1").innerHTML = uploadedImage.replace("C:\\fakepath\\","")
                 document.getElementById("choose-text-1").innerText = "다시 하려면 이미지를 업로드 하세요"
-
                 let extension = uploadedImage.split(".")[1]
                 
             }
