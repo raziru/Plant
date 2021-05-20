@@ -28,9 +28,9 @@ let progressBar =
         // Initialize/Load model
         async function initialize() {
             let status = document.querySelector('.init_status')
-            status.innerHTML = 'Loading Model .... <span class="fa fa-spinner fa-spin"></span>'
+            status.innerHTML = '모델을 가져오고 있습니다. <span class="fa fa-spinner fa-spin"></span>'
             model = await tf.loadLayersModel('./tensorflowjs-model/model.json');
-            status.innerHTML = 'Model Loaded Successfully  <span class="fa fa-check"></span>'
+            status.innerHTML = '가져오기 성공!  <span class="fa fa-check"></span>'
         }
 
         async function predict() {
