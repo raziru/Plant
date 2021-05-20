@@ -140,12 +140,11 @@ position: relative;
 display: flex;
 align-items: center;
 justify-content: center;
-background:#65caa5;
+
 }
 
 .progress > .inner {
     position: absolute;
-    color: white; 
     background:#65caa5;
     border: 1px solid #9b9b9b;
 }
@@ -153,7 +152,7 @@ background:#65caa5;
 .progress > svg {
 height: 100%;
 display: block;
-    color:#65caa5;
+
 }
 
 .init_status{
