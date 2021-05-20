@@ -155,6 +155,7 @@ border: 1px solid #9b9b9b;
 .progress > svg {
 height: 100%;
 display: block;
+    color:lightgreen;
 }
 
 .init_status{
@@ -173,7 +174,7 @@ display: block;
 }
 
 path {
-    stroke: limegreen;
+    stroke: lightgreen;
     stroke-width: 10;
     fill-opacity: 0.2;
 }
