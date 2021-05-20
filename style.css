@@ -147,9 +147,10 @@ justify-content: center;
 }
 
 .progress > .inner {
-position: absolute;
-color: white; 
-border: 1px solid #9b9b9b;
+    position: absolute;
+    color: white; 
+    background:lightgreen;
+    border: 1px solid #9b9b9b;
 }
 
 .progress > svg {
@@ -164,6 +165,8 @@ display: block;
     transition: ease-in-out .5s;
     text-align: center;
     margin: 10px 0px;
+    background:lightgreen;
+    color:white;
 
 }
 
