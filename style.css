@@ -23,7 +23,7 @@ h1 {
 }
 
 h1 span{
-    color: limegreen;
+    color:#65caa5;;
 }
 
 hr{
@@ -40,7 +40,7 @@ hr{
     margin: 20px 0px;
 }
 .upload-file{
-    border:2px #3eb489;
+    border:2px #65caa5;;
     color:#65caa5;
     width:100%;
     height:180px;
