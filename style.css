@@ -35,7 +35,6 @@ hr{
     position: relative;
     overflow:hidden;
     display:inline-block;
-    cursor:pointer;
     font-family: 'Poppins',sans-serif;
     width: 100%;
     margin: 20px 0px;
@@ -60,7 +59,10 @@ hr{
     cursor: pointer;
     min-height: 300px;
 }
-
+.success-1, .success-2{
+    display:none;
+    color: limegreen;
+}
 .success-1 i, .success-2 i{
     font-size: 18px !important;
     margin-left:6px;
@@ -146,7 +148,7 @@ justify-content: center;
 
 .progress > .inner {
 position: absolute;
-color: limegreen; 
+color: white; 
 border: 1px solid #9b9b9b;
 }
 
@@ -156,8 +158,6 @@ display: block;
 }
 
 .init_status{
-    background: limegreen;
-    color: white;
     padding: 10px;
     border-radius: 10px;
     transition: ease-in-out .5s;
