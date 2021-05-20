@@ -69,7 +69,7 @@ let pconf = document.querySelector('.box-result p')
 
             let uploadedImage = e.target.value
             if (uploadedImage){
-                document.getElementById("blankFile-1").innerHTML = uploadedImage.replace("C:\\fakepath\\","")
+                document.getElementById("file-1").innerHTML = uploadedImage.replace("C:\\fakepath\\","")
                 document.getElementById("choose-text-1").innerText = "Change Selected Image"
                 document.querySelector(".success-1").style.display = "inline-block"
 
